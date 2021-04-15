@@ -27,7 +27,7 @@ Es una asignatura de formación profesional dirigida a los estudiantes deLogíst
 | --- | --- | --- | --- | --- | 
 |$1^{er}$ parcial| - | 50 | 10 | 40 |
 |$2^{do}$ parcial| 30 | 20 | 10 | 40 |
-|3^{er}$ parcial | 100 | - | - | - |
+|$3^{er}$ parcial | 100 | - | - | - |
 
 - Parter Practica (30% nota final)
 
@@ -57,6 +57,8 @@ Es una asignatura de formación profesional dirigida a los estudiantes deLogíst
 
 **Reglamento de Grado, Artículo 8, Obligaciones del estudiante, literal a)**
 *“Respetar y cumplir el Estatuto, el Código de é́tica, el presente Reglamento y demás normativa interna de la ESPOL, y del sistema de educación superior, as ́ı como las disposiciones emanadas por las autoridades y directivos de la Institución”*
+
+
 **Reglamento de Grado, Artículo 72**
 *“El incumplimiento de los principios, valores y comportamiento ético establecido en el Código de ética de la ESPOL, podrá ser objeto de un proceso disciplinario para determinar responsabilidades y sanciones determinadas en la Ley Orgánica de Educación Superior”*
 

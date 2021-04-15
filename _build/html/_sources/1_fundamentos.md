@@ -62,6 +62,36 @@ Ciertos algoritmos tiene diferentes tiempos de convergencia dependiendo de la en
 
 Queremos garantizar una acota superior del tiempo de convergencia. Esta acota se cumple para cualquier solución inicial y de cualquier suposición.
 
+### El panorama general
 
+**No** debemos preocuparnos por términos específicos, esto es, constantes y/o de orden inferior.
 
+- *Manejabilidad*: Especificar las constantes y los términos de orden inferior necesitan un análisis mas detallado que en general no ayudarán a entender mejor el tiempo de convergencia.
+- *Constantes dependen de capacidad computacional*: Segun lenguaje y  computadora usada cada flop puede tardar mas o menos cierto tiempo.
 
+![panorama general](images/unidad1_panorama_gen.png)
+
+### La asíntota
+
+Queremos determinar la asíntota. Esto es que pasa con $T(x)$ cuando $x$ es muy grande.
+¿$T(x)$? cuando $x \to \infty$
+
+![asintota](images/unidad1_asintota.png)
+
+## Notación *Gran O*
+
+Notación Gran O
+: $T(n) = O(f(n))$ si y solo si $T(n)$ es eventualmente acotada superiormente por un múltiplo constante de $f(n)$. Esto es, para constantes positivos $c$ y $n_0$ se cumple
+
+    $$ T(n) \leq c \cdot f(n)$$
+
+    para todo $n \geq n_0$
+
+$T(n)$ es el tiempo de convergencia del peor de los escenarios y $f(n)$ es una función “canónica”, e.g., $n$, $\log n$, $n^2$.
+
+Por ejemplo, polinomios de grado $k$ son $O(n^k)$. 
+Un ejemplo especifico es: si tenemos un algoritmo cuyo tiempo de convergencia es $T(n) = 10n5+3n3+n$ entonces ¿Cuál es $f(n)$ tal que $T(n)=O(f(n))$?
+
+![gran o ejemplo](images/unidad1_gran_o_ej.png)
+
+Si escojo $f(x)=x^3$ entonces $n_0=15$ y $c=6$ cumplen con $T(x)= c \cdot f(x)$

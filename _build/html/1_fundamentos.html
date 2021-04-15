@@ -198,7 +198,25 @@
      </em>
     </a>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#el-panorama-general">
+     1.4.2. El panorama general
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#la-asintota">
+     1.4.3. La asíntota
+    </a>
+   </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#notacion-gran-o">
+   1.5. Notación
+   <em>
+    Gran O
+   </em>
+  </a>
  </li>
 </ul>
 
@@ -274,6 +292,36 @@
 <p>Ciertos algoritmos tiene diferentes tiempos de convergencia dependiendo de la entrada (e.g. solución inicial). Nos interesa saber que ocurre en el peor caso, no en el mejor de los casos. ¿Por que?</p>
 <p>Queremos garantizar una acota superior del tiempo de convergencia. Esta acota se cumple para cualquier solución inicial y de cualquier suposición.</p>
 </div>
+<div class="section" id="el-panorama-general">
+<h3><span class="section-number">1.4.2. </span>El panorama general<a class="headerlink" href="#el-panorama-general" title="Permalink to this headline">¶</a></h3>
+<p><strong>No</strong> debemos preocuparnos por términos específicos, esto es, constantes y/o de orden inferior.</p>
+<ul class="simple">
+<li><p><em>Manejabilidad</em>: Especificar las constantes y los términos de orden inferior necesitan un análisis mas detallado que en general no ayudarán a entender mejor el tiempo de convergencia.</p></li>
+<li><p><em>Constantes dependen de capacidad computacional</em>: Segun lenguaje y  computadora usada cada flop puede tardar mas o menos cierto tiempo.</p></li>
+</ul>
+<p><img alt="panorama general" src="_images/unidad1_panorama_gen.png" /></p>
+</div>
+<div class="section" id="la-asintota">
+<h3><span class="section-number">1.4.3. </span>La asíntota<a class="headerlink" href="#la-asintota" title="Permalink to this headline">¶</a></h3>
+<p>Queremos determinar la asíntota. Esto es que pasa con <span class="math notranslate nohighlight">\(T(x)\)</span> cuando <span class="math notranslate nohighlight">\(x\)</span> es muy grande.
+¿<span class="math notranslate nohighlight">\(T(x)\)</span>? cuando <span class="math notranslate nohighlight">\(x \to \infty\)</span></p>
+<p><img alt="asintota" src="_images/unidad1_asintota.png" /></p>
+</div>
+</div>
+<div class="section" id="notacion-gran-o">
+<h2><span class="section-number">1.5. </span>Notación <em>Gran O</em><a class="headerlink" href="#notacion-gran-o" title="Permalink to this headline">¶</a></h2>
+<dl class="simple myst">
+<dt>Notación Gran O</dt><dd><p><span class="math notranslate nohighlight">\(T(n) = O(f(n))\)</span> si y solo si <span class="math notranslate nohighlight">\(T(n)\)</span> es eventualmente acotada superiormente por un múltiplo constante de <span class="math notranslate nohighlight">\(f(n)\)</span>. Esto es, para constantes positivos <span class="math notranslate nohighlight">\(c\)</span> y <span class="math notranslate nohighlight">\(n_0\)</span> se cumple</p>
+<div class="math notranslate nohighlight">
+\[ T(n) \leq c \cdot f(n)\]</div>
+<p>para todo <span class="math notranslate nohighlight">\(n \geq n_0\)</span></p>
+</dd>
+</dl>
+<p><span class="math notranslate nohighlight">\(T(n)\)</span> es el tiempo de convergencia del peor de los escenarios y <span class="math notranslate nohighlight">\(f(n)\)</span> es una función “canónica”, e.g., <span class="math notranslate nohighlight">\(n\)</span>, <span class="math notranslate nohighlight">\(\log n\)</span>, <span class="math notranslate nohighlight">\(n^2\)</span>.</p>
+<p>Por ejemplo, polinomios de grado <span class="math notranslate nohighlight">\(k\)</span> son <span class="math notranslate nohighlight">\(O(n^k)\)</span>.
+Un ejemplo especifico es: si tenemos un algoritmo cuyo tiempo de convergencia es <span class="math notranslate nohighlight">\(T(n) = 10n5+3n3+n\)</span> entonces ¿Cuál es <span class="math notranslate nohighlight">\(f(n)\)</span> tal que <span class="math notranslate nohighlight">\(T(n)=O(f(n))\)</span>?</p>
+<p><img alt="gran o ejemplo" src="_images/unidad1_gran_o_ej.png" /></p>
+<p>Si escojo <span class="math notranslate nohighlight">\(f(x)=x^3\)</span> entonces <span class="math notranslate nohighlight">\(n_0=15\)</span> y <span class="math notranslate nohighlight">\(c=6\)</span> cumplen con <span class="math notranslate nohighlight">\(T(x)= c \cdot f(x)\)</span></p>
 </div>
 </div>
 
