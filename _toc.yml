@@ -1,2 +1,3 @@
-- file: landing-page
+- file: intro
+  numbered: true
 - file: 1_fundamentos
