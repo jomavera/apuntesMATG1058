@@ -1,4 +1,4 @@
-# 1. Fundamentos de Análisis Numerico
+# Fundamentos de Análisis Numerico
 
 ## Tipos de Métodos (algoritmos) Numéricos
 
