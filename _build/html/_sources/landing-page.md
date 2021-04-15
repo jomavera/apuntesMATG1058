@@ -1,25 +1,36 @@
 # MATG1058 - Optimización Numérica
 
-This is a small sample book to give you a feel for how book content is
-structured.
+## Acerca de
 
-:::{note}
-Here is a note!
-:::
+Es una asignatura de formación profesional dirigida a los estudiantes deLogística y Transporte, y Estadística. Se trata la resolución de problemas de optimización mediante eluso de métodos numéricos que permiten encontrar los puntos estacionarios de forma aproximada, esdecir, una solución que cumple con un nivel mínimo de tolerancia. El curso empieza con la revisiónde los fundamentos del análisis numérico y cómo a través de éste, podemos resolver: sistemas deecuaciones lineales y no lineales, para luego aplicar esos conceptos en la resolución de problemas deoptimización sin restricciones.
 
-And here is a code block:
+## Prerequisitos
 
-```
-e = mc^2
-```
+- Conceptos básicos de programación.
+- Conocimientos algebraicos y manejo de matrices.
 
-Check out the content pages bundled with this sample book to see more.
+## Objetivos
 
-# Here's my sample title
+- Entender los conceptos básicos de análisis de algoritmos que resuelvan problemas de optimización
 
-This is some sample text.
+- Identificar puntos estacionarios para su clasificación como máximos o mínimos, para problemasde optimización.
 
-(section-label)=
-## Here's my first section
+- Clasificar soluciones en óptimos locales y globales mediante el análisis matemático.
 
-Here is a [reference to the intro](intro.md). Here is a reference to [](section-label).
+- Resolver problemas de optimización no lineal sin restricciones, utilizando métodos numéricos.
+
+## Evaluación
+
+- Parte Teórica (70% nota final)
+
+| | Examen | Lecciones | Tareas | Reporte Investigativo |
+| --- | --- | --- | --- | --- | 
+|$1^{r}$| - | 50 | 10 | 40 |
+|$1^{r}$| 30 | 20 | 10 | 40 |
+|$1^{r}$| 100 | - | - | - |
+
+- Parter Practica (30% nota final)
+
+| Laboratorios | 100 |
+| | --- |
+Total | 100
