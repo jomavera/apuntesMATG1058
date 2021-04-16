@@ -1,4 +1,4 @@
-# Fundamentos de Análisis Numerico
+# Fundamentos de Análisis Numérico
 
 ## Tipos de Métodos (algoritmos) Numéricos
 
@@ -6,11 +6,24 @@
 
   - Métodos Iterativos
 
-  ![metodo iterativo](images/unidad1_metodo_iterativo.png)
+    ```{figure} images/unidad1_metodo_iterativo.png
+    ---
+    width: 90%
+    align: center
+    name: metodo iterativo
+    ---
+    Gráfico dirigido de un método iterativo
+    ```
 
   - Métodos Directos
-
-  ![metodo directo](images/unidad1_metodo_directo.png)
+    ```{figure} images/unidad1_metodo_directo.png
+    ---
+    width: 55%
+    align: center
+    name: metodo directo
+    ---
+    Gráfico dirigido de un método directo
+    ```
 
 ## Análisis de algoritmos: iterativos
 
@@ -69,16 +82,42 @@ Queremos garantizar una acota superior del tiempo de convergencia. Esta acota se
 - *Manejabilidad*: Especificar las constantes y los términos de orden inferior necesitan un análisis mas detallado que en general no ayudarán a entender mejor el tiempo de convergencia.
 - *Constantes dependen de capacidad computacional*: Segun lenguaje y  computadora usada cada flop puede tardar mas o menos cierto tiempo.
 
-![panorama general](images/unidad1_panorama_gen.png)
+```{margin}
+En la {numref}`Fig. {number} <panorama general>` podemos ver que las constantes y los términos de orden inferior tienen un peso importante cuando $x \to \infty$
+```
+
+```{figure} images/unidad1_panorama_gen.png
+---
+width: 80%
+align: center
+name: panorama general
+---
+Funciones para diferentes valores de $x$
+```
+
 
 ### La asíntota
 
 Queremos determinar la asíntota. Esto es que pasa con $T(x)$ cuando $x$ es muy grande.
 ¿$T(x)$? cuando $x \to \infty$
 
-![asintota](images/unidad1_asintota.png)
+```{margin}
+En la {numref}`Fig. {number} <asintota>` vemos que para $x$ pequeño $f(x)$ no resulta en una cota superior de $g(x)$.
+```
+
+```{figure} images/unidad1_asintota.png
+---
+width: 65%
+align: center
+name: asintota
+---
+Grafico de la función $g(x)$ y función que la acota $f(x)$
+```
 
 ## Notación *Gran O*
+
+Esta notación ayuda a caracterizar el crecimiento de una función. En este caso vamos a tratar con la función que caracteriza el numero de operaciones de un algoritmo. La  letra $O$ es usada porque se refiere al *orden* de la función. La notación provee una cota superior a una función mientras su argumento se acerque a algún valor.
+
 
 Notación Gran O
 : $T(n) = O(f(n))$ si y solo si $T(n)$ es eventualmente acotada superiormente por un múltiplo constante de $f(n)$. Esto es, para constantes positivos $c$ y $n_0$ se cumple
@@ -89,9 +128,29 @@ Notación Gran O
 
 $T(n)$ es el tiempo de convergencia del peor de los escenarios y $f(n)$ es una función “canónica”, e.g., $n$, $\log n$, $n^2$.
 
+En esta notacion, el simbolo “=” no se usa en sentido estricto. Por ejemplo, $x^3=O(x^3)$ y $2x^3+x=O(x^3)$, pero claro $x^3 \neq 2x^3+x$.
+
 Por ejemplo, polinomios de grado $k$ son $O(n^k)$. 
 Un ejemplo especifico es: si tenemos un algoritmo cuyo tiempo de convergencia es $T(n) = 10n5+3n3+n$ entonces ¿Cuál es $f(n)$ tal que $T(n)=O(f(n))$?
 
-![gran o ejemplo](images/unidad1_gran_o_ej.png)
-
+```{margin}
 Si escojo $f(x)=x^3$ entonces $n_0=15$ y $c=6$ cumplen con $T(x)= c \cdot f(x)$
+```
+
+```{figure} images/unidad1_gran_o_ej.png
+---
+width: 80%
+align: center
+name: gran o ejemplo
+---
+Ejemplo de función que acota a $T(x)$
+```
+
+
+## Orden de convergencia para métodos iterativos
+
+Supongamos que tengamos una secuencia que $\{x^{(n)}\}_{n=0}^{\infty}$ a $x^*$, con $x^*$ con $x^{(n)} \neq x^*$ para todo $x^{(n)}$. Si existen constantes positivas $\lambda$ y $\alpha$ con
+
+$$\lim_{n \to infty} \frac{|x^{(n+1)}-x^*}{|x^{(n)}-x^*|^{\alpha}}=\lambda$$
+
+entonces $\{x^{(n)}\}_{n=0}^{\infty}$ converge a $x^*$ en orden $\alpha$ con error constante asintótico $\lambda$.
