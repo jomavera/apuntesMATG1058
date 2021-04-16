@@ -2,6 +2,10 @@
 
 ## Acerca de
 
+**Profesor:** José Manuel Vera
+
+**Horario:** Lunes y Miercoles - 11:00 a 13:00
+
 Es una asignatura de formación profesional dirigida a los estudiantes de Logística y Transporte, y Estadística. Se trata la resolución de problemas de optimización mediante el uso de métodos numéricos. El curso empieza con la revisión de los fundamentos del análisis numérico y cómo a través de éste, podemos resolver: sistemas de ecuaciones lineales y no lineales, para luego aplicar esos conceptos en la resolución de problemas de optimización sin restricciones.
 
 ## Prerequisitos
@@ -29,7 +33,7 @@ Es una asignatura de formación profesional dirigida a los estudiantes de Logís
 |$2^{do}$ parcial| 30 | 20 | 10 | 40 |
 |$3^{er}$ parcial | 100 | - | - | - |
 
-- Parter Practica (30% nota final)
+- Parte Practica (30% nota final)
 
 | Laboratorios | 100 |
 | --- | --- |
@@ -56,7 +60,7 @@ Es una asignatura de formación profesional dirigida a los estudiantes de Logís
 ## Etica del estudiante
 
 **Reglamento de Grado, Artículo 8, Obligaciones del estudiante, literal a)**
-*“Respetar y cumplir el Estatuto, el Código de é́tica, el presente Reglamento y demás normativa interna de la ESPOL, y del sistema de educación superior, as ́ı como las disposiciones emanadas por las autoridades y directivos de la Institución”*.
+*“Respetar y cumplir el Estatuto, el Código de é́tica, el presente Reglamento y demás normativa interna de la ESPOL, y del sistema de educación superior, así como las disposiciones emanadas por las autoridades y directivos de la Institución”*.
 
 
 **Reglamento de Grado, Artículo 72**
@@ -65,6 +69,7 @@ Es una asignatura de formación profesional dirigida a los estudiantes de Logís
 ## Plagio y deshonestidad académica
 
 El plagio y/o deshonestidad académica de un documento provocará una nota de cero para el estudiante autor del documento original y l@s estudiante que plagió. Cualquier reclamo de la decisión tomada por el profesor deberá ser tratada con todos los implicados por medio de videollamada con los estudiantes implicados.
+
 En caso de no llegar a un acuerdo entre las partes (estudiantes y profesor) se procederá a poner la nota correspondiente (revertir la sanción) y hacer la notificación correspondiente a las autoridades para que se inicie un proceso disciplinario.
 
 ## Recursos bilbiográficos
