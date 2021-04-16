@@ -2,7 +2,7 @@
 
 ## Acerca de
 
-Es una asignatura de formación profesional dirigida a los estudiantes deLogística y Transporte, y Estadística. Se trata la resolución de problemas de optimización mediante eluso de métodos numéricos que permiten encontrar los puntos estacionarios de forma aproximada, esdecir, una solución que cumple con un nivel mínimo de tolerancia. El curso empieza con la revisiónde los fundamentos del análisis numérico y cómo a través de éste, podemos resolver: sistemas deecuaciones lineales y no lineales, para luego aplicar esos conceptos en la resolución de problemas deoptimización sin restricciones.
+Es una asignatura de formación profesional dirigida a los estudiantes de Logística y Transporte, y Estadística. Se trata la resolución de problemas de optimización mediante el uso de métodos numéricos. El curso empieza con la revisión de los fundamentos del análisis numérico y cómo a través de éste, podemos resolver: sistemas de ecuaciones lineales y no lineales, para luego aplicar esos conceptos en la resolución de problemas de optimización sin restricciones.
 
 ## Prerequisitos
 
@@ -56,11 +56,11 @@ Es una asignatura de formación profesional dirigida a los estudiantes deLogíst
 ## Etica del estudiante
 
 **Reglamento de Grado, Artículo 8, Obligaciones del estudiante, literal a)**
-*“Respetar y cumplir el Estatuto, el Código de é́tica, el presente Reglamento y demás normativa interna de la ESPOL, y del sistema de educación superior, as ́ı como las disposiciones emanadas por las autoridades y directivos de la Institución”*
+*“Respetar y cumplir el Estatuto, el Código de é́tica, el presente Reglamento y demás normativa interna de la ESPOL, y del sistema de educación superior, as ́ı como las disposiciones emanadas por las autoridades y directivos de la Institución”*.
 
 
 **Reglamento de Grado, Artículo 72**
-*“El incumplimiento de los principios, valores y comportamiento ético establecido en el Código de ética de la ESPOL, podrá ser objeto de un proceso disciplinario para determinar responsabilidades y sanciones determinadas en la Ley Orgánica de Educación Superior”*
+*“El incumplimiento de los principios, valores y comportamiento ético establecido en el Código de ética de la ESPOL, podrá ser objeto de un proceso disciplinario para determinar responsabilidades y sanciones determinadas en la Ley Orgánica de Educación Superior”*.
 
 ## Plagio y deshonestidad académica
 
@@ -69,6 +69,6 @@ En caso de no llegar a un acuerdo entre las partes (estudiantes y profesor) se p
 
 ## Recursos bilbiográficos
 
-- Rodriguez Ojeda Luis. (2016). An ́alisis Num ́erico: Un enfoque algor ́ıtmico con el soporte de Python. Libros Digitales CIB.
+- Rodriguez Ojeda Luis. (2016). *Análisis Numérico: Un enfoque algorítmico con el soporte de Python*. Libros Digitales CIB.
 
-- Nocedal Jorge, Wright Stephen. (2006) Numerical Optimization. Springer
+- Nocedal Jorge, Wright Stephen. (2006) *Numerical Optimization*. Springer
