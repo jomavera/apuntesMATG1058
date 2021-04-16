@@ -4,7 +4,7 @@
 
 **Profesor:** José Manuel Vera
 
-**Horario:** Lunes y Miercoles - 11:00 a 13:00
+**Horario:** Lunes y Miércoles - 11:00 a 13:00
 
 Es una asignatura de formación profesional dirigida a los estudiantes de Logística y Transporte, y Estadística. Se trata la resolución de problemas de optimización mediante el uso de métodos numéricos. El curso empieza con la revisión de los fundamentos del análisis numérico y cómo a través de éste, podemos resolver: sistemas de ecuaciones lineales y no lineales, para luego aplicar esos conceptos en la resolución de problemas de optimización sin restricciones.
 

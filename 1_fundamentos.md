@@ -29,33 +29,42 @@
 
 Es natural hablar de *convergencia* para los métodos iterativos
 
-Convergencia
-: Puede definirse en terminos del límite de una sucecsión. Diremos que un algoritmo converge a $l$ si:
+```{div} definicion
+**Convergencia**
 
-    $$\lim_{n \to \infty} x^{(n)}= l$$
+Puede definirse en terminos del límite de una sucecsión. Diremos que un algoritmo converge a $l$ si:
 
-    donde $x^{(n)}$ es la salida del algoritmo en la iteración $n$.
+$$\lim_{n \to \infty} x^{(n)}= l$$
+
+donde $x^{(n)}$ es la salida del algoritmo en la iteración $n$.
+```
 
 Por esto, dado un condicion de terminación que *trunca* el método dado como resultado el *error de truncamiento*
 
-Error de truncamiento
-: El errro de truncamiento en la iteración $n$ se define como:
 
-    $$E_n=|x^*-x^{(n)}|$$
+```{div} definicion
+**Error de truncamiento**
 
-    donde $x^*$ es la solución y $x^{(n)}$ es la salida del algoritmo en la iteración $n$.
+El error de truncamiento en la iteración $n$ se define como:
+
+$$E_n=|x^*-x^{(n)}|$$
+
+donde $x^*$ es la solución y $x^{(n)}$ es la salida del algoritmo en la iteración $n$.
+```
 
 ## Análisis de algoritmos: directos
 
 En cambio, en los métodos directos en general se entrega una solucion exacta o aproximada.
 
-Error de redondeo
-: El error de redondeo de un algoritmo se define como:
+```{div} definicion
+**Error de redondeo**
 
-    $$E = |x^* - \bar{x}|$$
+El error de redondeo de un algoritmo se define como:
 
-    donde $x^*$ es la solución y $\bar{x}$ es la salida del algoritmo
+$$E = |x^* - \bar{x}|$$
 
+donde $x^*$ es la solución y $\bar{x}$ es la salida del algoritmo
+```
 
 ## Análisis asintótico
 
@@ -118,13 +127,15 @@ Grafico de la función $g(x)$ y función que la acota $f(x)$
 
 Esta notación ayuda a caracterizar el crecimiento de una función. En este caso vamos a tratar con la función que caracteriza el numero de operaciones de un algoritmo. La  letra $O$ es usada porque se refiere al *orden* de la función. La notación provee una cota superior a una función mientras su argumento se acerque a algún valor.
 
+```{div} definicion
+**Notación Gran O**
 
-Notación Gran O
-: $T(n) = O(f(n))$ si y solo si $T(n)$ es eventualmente acotada superiormente por un múltiplo constante de $f(n)$. Esto es, para constantes positivos $c$ y $n_0$ se cumple
+$T(n) = O(f(n))$ si y solo si $T(n)$ es eventualmente acotada superiormente por un múltiplo constante de $f(n)$. Esto es, para constantes positivos $c$ y $n_0$ se cumple
 
-    $$ T(n) \leq c \cdot f(n)$$
+$$ T(n) \leq c \cdot f(n)$$
 
-    para todo $n \geq n_0$
+para todo $n \geq n_0$
+```
 
 $T(n)$ es el tiempo de convergencia del peor de los escenarios y $f(n)$ es una función “canónica”, e.g., $n$, $\log n$, $n^2$.
 
