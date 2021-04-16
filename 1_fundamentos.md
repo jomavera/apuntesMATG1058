@@ -151,10 +151,16 @@ Ejemplo de función que acota a $T(x)$
 
 Supongamos que tengamos una secuencia que $\{x^{(n)}\}_{n=0}^{\infty}$ a $x^*$, con $x^*$ con $x^{(n)} \neq x^*$ para todo $x^{(n)}$. Si existen constantes positivas $\lambda$ y $\alpha$ con
 
-$$\lim_{n \to infty} \frac{|x^{(n+1)}-x^*}{|x^{(n)}-x^*|^{\alpha}}=\lambda$$
+$$\lim_{n \to infty} \frac{|x^{(n+1)}-x^*|}{|x^{(n)}-x^*|^{\alpha}}=\lambda$$
 
 entonces $\{x^{(n)}\}_{n=0}^{\infty}$ converge a $x^*$ en orden $\alpha$ con error constante asintótico $\lambda$.
 
 - Un algoritmo de mayor orden de convergencia $\to$ más rápido.
 
 - $\lambda$ afecta la velocidad de convergencia pero $\alpha$ predomina.
+
+- Métodos en este curso se caracterizan de la siguiente manera:
+    - Si $\alpha=1$, la secuencia es **linealmente convergente**
+        - Si $\lambda=0$ es **superlinealmente**.
+        - Si $\lambda=1$ es **sublinealmente**.
+    - Si $\alpha=2$, la secuencia es **cuadráticamente convergente**.
