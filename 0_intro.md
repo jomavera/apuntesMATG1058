@@ -57,14 +57,14 @@ Es una asignatura de formación profesional dirigida a los estudiantes de Logís
     - Las lecciones se realizarán en SidWeb en horario indicado con anterioridad. Tambien es necesario estar conectado mediante Zoom.
     - El archivo del laboratorio tambien debe ser entregado via SidWeb (Paralelo 101).
 
-## Etica del estudiante
+## Ética del estudiante
 
 **Reglamento de Grado, Artículo 8, Obligaciones del estudiante, literal a)**
-*“Respetar y cumplir el Estatuto, el Código de é́tica, el presente Reglamento y demás normativa interna de la ESPOL, y del sistema de educación superior, así como las disposiciones emanadas por las autoridades y directivos de la Institución”*.
+*“Respetar y cumplir el Estatuto, el Código de Ética, el presente Reglamento y demás normativa interna de la ESPOL, y del sistema de educación superior, así como las disposiciones emanadas por las autoridades y directivos de la Institución”*.
 
 
 **Reglamento de Grado, Artículo 72**
-*“El incumplimiento de los principios, valores y comportamiento ético establecido en el Código de ética de la ESPOL, podrá ser objeto de un proceso disciplinario para determinar responsabilidades y sanciones determinadas en la Ley Orgánica de Educación Superior”*.
+*“El incumplimiento de los principios, valores y comportamiento ético establecido en el Código de Ética de la ESPOL, podrá ser objeto de un proceso disciplinario para determinar responsabilidades y sanciones determinadas en la Ley Orgánica de Educación Superior”*.
 
 ## Plagio y deshonestidad académica
 
