@@ -61,7 +61,14 @@ Si $c_n=\frac{1}{2}(b_n+a_n)$ entonces $E_n=|c_n-c^*|\leq \frac{1}{2}(b_n-a_n)=\
 
 Esto es lo mismo que
 
-$$c_n = c^* + O\bigg(\frac{1}{2^n}\bigg)$$
+```{margin}
+{eq}`convergencia_biseccion` indica que el error se reduce linealmente. Por lo tanto, el orden de convergencia del método es lineal.
+```
+
+```{math}
+:label: convergencia_biseccion
+c_n = c^* + O\bigg(\frac{1}{2^n}\bigg)
+```
 
 ## Método de Punto Fijo
 
@@ -137,7 +144,11 @@ e igualamos a cero obetenemos la *formula de Newton*:
 
 $$f(x^{(n)}) + (x - x^{(n)})f'(x^{(n)}) = 0$$
 
-$$x^{(n+1)} = x^{(n)} - \frac{f(x^{(n)})}{f'(x^{(n)})}$$
+
+```{math}
+:label: formula newton
+x^{(n+1)} = x^{(n)} - \frac{f(x^{(n)})}{f'(x^{(n)})}
+```
 
 ### Pseudocódigo
 
@@ -168,4 +179,8 @@ $$\frac{|x^{(n+1)}-p|}{|x^{(n)}-p|^2}=\frac{|g''(\varepsilon_n)|}{2}.$$
 
 Como $|g'(x)|\leq k < 1$, entonces $\{x^{(n)}\}_{n=0}^{\infty}$ converge a $p$ y $\{\varepsilon_n\}_{n=0}^{\infty}$ también converge a $p$ y $\{\varepsilon_n\}_{n=0}^{\infty}$ entonces
 
-$$\lim_{n \to \infty} \frac{|x^{(n+1)}-p|}{|x^{(n)}-p|^2} = \frac{|g''(p)|}{2}$$
+
+```{math}
+:label: orden de convergencia newton ec
+\lim_{n \to \infty} \frac{|x^{(n+1)}-p|}{|x^{(n)}-p|^2} = \frac{|g''(p)|}{2}
+```
