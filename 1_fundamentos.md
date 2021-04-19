@@ -162,7 +162,10 @@ Ejemplo de función que acota a $T(x)$
 
 Supongamos que tengamos una secuencia que $\{x^{(n)}\}_{n=0}^{\infty}$ a $x^*$, con $x^*$ con $x^{(n)} \neq x^*$ para todo $x^{(n)}$. Si existen constantes positivas $\lambda$ y $\alpha$ con
 
-$$\lim_{n \to infty} \frac{|x^{(n+1)}-x^*|}{|x^{(n)}-x^*|^{\alpha}}=\lambda$$
+```{math}
+:label: orden de convergencia
+\lim_{n \to infty} \frac{|x^{(n+1)}-x^*|}{|x^{(n)}-x^*|^{\alpha}}=\lambda
+```
 
 entonces $\{x^{(n)}\}_{n=0}^{\infty}$ converge a $x^*$ en orden $\alpha$ con error constante asintótico $\lambda$.
 
