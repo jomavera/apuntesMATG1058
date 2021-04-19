@@ -74,6 +74,8 @@ En caso de no llegar a un acuerdo entre las partes (estudiantes y profesor) se p
 
 ## Recursos bilbiográficos
 
-- Rodriguez Ojeda Luis. (2016). *Análisis Numérico: Un enfoque algorítmico con el soporte de Python*. Libros Digitales CIB.
+- Rodriguez Ojeda, Luis. (2016) *Análisis Numérico: Un enfoque algorítmico con el soporte de Python*. Libros Digitales CIB ESPOL
 
-- Nocedal Jorge, Wright Stephen. (2006) *Numerical Optimization*. Springer
+- Burden, Richar L. $\&$ Faires, J. Douglas. (2011) *Numerical Analysis*. Brooks/Cole, Cengage Learning
+
+- Nocedal, Jorge $\&$ Wright, Stephen. (2006) *Numerical Optimization*. Springer
