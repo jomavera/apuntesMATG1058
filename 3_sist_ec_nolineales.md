@@ -112,7 +112,7 @@ Para resolver el sistema con la matriz $L$,
 ---
 width: 80%
 align: center
-name: pseudocodigo cholesky 2
+name: pseudocodigo sistema cholesky 
 ---
 Pseudocódigo resolución de sistema de ecuaciones con factorización de Cholesky
 ```
