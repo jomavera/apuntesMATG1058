@@ -1,4 +1,4 @@
-# Solución de sistema de ecuaciones
+# Soluciones de Sistema de Ecuaciones
 
 ## Método de descomposición de matrices
 
