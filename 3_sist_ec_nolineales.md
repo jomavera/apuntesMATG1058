@@ -105,7 +105,8 @@ name: pseudocodigo cholesky
 Pseudocódigo factorización de Cholesky
 ```
 
-Para resolver el sistema con la matriz $L$
+Para resolver el sistema con la matriz $L$,
+
 
 ```{figure} images/unidad_3_algo_cholesky_2.png
 ---
