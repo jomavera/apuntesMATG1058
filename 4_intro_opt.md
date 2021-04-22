@@ -47,3 +47,72 @@ Verificar si una función tiene una solución óptima global es difícil en gene
 
 Los problemas $\min_{x \in X} f(x)$ y $\max_{x \in X} f(x)$, donde $X \subseteq \mathbb{R}^n$ es un conjunto compacto y $f: X \to \mathbb{R}$ es una función continua, tiene soluciones óptimas globales.
 ```
+
+## Problemas convexos
+
+Dado a la estructura especial de los problemas convexos son un tipo importante de problemas dentro de la optimización.
+
+```{div} definicion
+**Problema convexo**
+
+Un problema $\min_{x \in X}f(x)$ es llamado un problema de minimización
+convexa si $f$ es una función convexa y $X$ es un conjunto convexo.
+```
+
+### Conuntos convexos
+Un conjunto $C$ es convexo si la línea entre cualquier dos puntos de $C$ se encuentra en $C$
+
+```{div} definicion
+**Conjunto convexo**
+
+Un conjunto $X \subseteq \mathbb{R}^n$ se dice que es convexo para cualquier $x, y \in X$ y cualquier $\alpha \in (0,1)$ entonces $\alpha \cdot \textbf{x} + (1-\alpha )\cdot \textbf{y} \in X$
+```
+
+#### Ejemplos
+
+- Una **línea** es convexa
+
+- Los **conjuntos afines** son convexos. 
+
+```{div} definicion
+**Conjunto afín**
+
+Un conjunto $C \subseteq \mathbb{R}^n$ es afín si la línea que atraviesa cualquier dos puntos en $C$ se encuentra en $C$, esto es, para cualquier $\textbf{x}_1, \textbf{x}_2 \in C$ y $\theta \in \mathbb{R}$ se cumple $\theta \textbf{x}_1 + (1-\theta)\textbf{x}_2 \in C$.
+```
+
+- Los **hiplerplanos** $\{\textbf{x}| \textbf{a}^T\textbf{x} = b\}$ son conjutnos convexos.
+
+- Los **semiespacios** $\{\textbf{x} | \textbf{a}^T\textbf{x} \leq b \}$, $\{\textbf{x} | \textbf{a}^T\textbf{x} \geq b \}$ son convexos.
+
+- Sea $f$ un función convexa y $C$ un conjunto convexo entonces los conjuntos de nivel $\{\textbf{x} \in C | f(\textbf{x}) \leq \alpha \}$ son convexos para todos los escalares $\alpha$.
+
+### Operaciones que preservan la convexidad
+
+Conocer estas operaciones nos permite identificar conjuntos que a primera vista no podriamos determinar si son convexos.
+
+- **Intersección**: Si $S_1$ y $S_2$ son convexos, entonces $S_1 \cap S_2$ es convexo
+
+- **Funciones afines**: Una función $f$ es afín si es la suma de una función lineal y una constante, esto es, la forma $f(\textbf{x})=A\textbf{x}+\textbf{b}$ donde $A \in \mathbb{R}^{m \times n}$ y $\textbf{b} \in \mathbb{R}^m$. Suponga que $S \subseteq \mathbb{R}^n$ es convexo y $f: \mathbb{R}^n \to \mathbb{R}^m$ es un función afín. Entonces la imagen de $S$ debajo de $f$,
+
+$$f(S) = \{f(\textbf{x} | \textbf{x} \in S\}$$
+
+es convexo.
+- El conjunto de elementos que resultan de la suma de los elementos de dos conjuntos convexos $\{\textbf{x}_1 + \textbf{x}_2 | \textbf{x}_1 \in C_1, \textbf{x}_2 \in C_2\}$ es convexo.
+
+### Funciones convexas
+
+```{div} definicion
+**Función convexa**
+
+Dado un conjunto convexo $X \subseteq \mathbb{R}^n$, una función $f: X \to \mathbb{R}$ es convexa si 
+
+$$f(\alpha \cdot \textbf{x} + (1-\alpha)\textbf{y}) \leq \alpha f(\textbf{x}) + (1-\alpha)\textbf{y} \hspace{1cm} \forall \textbf{x}, \textbf{y} \in X, \alpha \in (0,1)$$
+```
+
+Otra manera de caracterizar las funciones convexas es con su epigrafo
+
+```{div} definicion
+El epigrafo de una función es el conjunto que se encuentra por **encima** de la función, i.e., si $C$ es un subconjunto de $\mathbb{R}^n$, y una función $f: C \to \mathbb{R}$, entonces el epigrafo de $f$ es:
+
+$$\text{epi}(f) = \{(\textbf{x},z) | \textbf{x} \in \mathbb{R}^n, z \in \mathbb{R}, f(\textbf{x}) \leq z  \}$$
+```
