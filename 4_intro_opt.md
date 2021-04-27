@@ -29,7 +29,7 @@ Un vector $\textbf{x}^*$ es un mínimo global sin restricciones de $f$ si no es 
 $$f(\textbf{x}^*) \leq f(\textbf{x}), \hspace{0.4cm} \forall \textbf{x}\in \mathbb{R}^n$$
 ```
 
-```{figure} images/unidad_4_min_global_local_bg.PNG
+```{figure} images/unidad_4_min_global_local_bg.png
 ---
 width: 40%
 align: center
@@ -80,7 +80,7 @@ Un conjunto $C$ es convexo si la línea entre cualquier dos puntos de $C$ se enc
 Un conjunto $X \subseteq \mathbb{R}^n$ se dice que es convexo para cualquier $x, y \in X$ y cualquier $\alpha \in (0,1)$ entonces $\alpha \cdot \textbf{x} + (1-\alpha )\cdot \textbf{y} \in X$
 ```
 
-```{figure} images/unidad_4_conjuntos_convexos_bg.PNG
+```{figure} images/unidad_4_conjuntos_convexos_bg.png
 ---
 width: 60%
 align: center
@@ -130,7 +130,7 @@ Dado un conjunto convexo $X \subseteq \mathbb{R}^n$, una función $f: X \to \mat
 $$f(\alpha \cdot \textbf{x} + (1-\alpha)\textbf{y}) \leq \alpha f(\textbf{x}) + (1-\alpha)\textbf{y} \hspace{1cm} \forall \textbf{x}, \textbf{y} \in X, \alpha \in (0,1)$$
 ```
 
-```{figure} images/unidad_4_grafico_funcion_convexa_bg.PNG
+```{figure} images/unidad_4_grafico_funcion_convexa_bg.png
 ---
 width: 80%
 align: center
@@ -148,7 +148,7 @@ El epigrafo de una función es el conjunto que se encuentra por **encima** de la
 $$\text{epi}(f) = \{(\textbf{x},z) | \textbf{x} \in \mathbb{R}^n, z \in \mathbb{R}, f(\textbf{x}) \leq z  \}$$
 ```
 
-```{figure} images/unidad_4_epigrafo_funcion_convexa_bg.PNG
+```{figure} images/unidad_4_epigrafo_funcion_convexa_bg.png
 ---
 width: 80%
 align: center
