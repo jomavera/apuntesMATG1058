@@ -82,7 +82,7 @@ Un conjunto $X \subseteq \mathbb{R}^n$ se dice que es convexo para cualquier $x,
 
 ```{figure} images/unidad_4_conjuntos_convexos_bg.PNG
 ---
-width: 40%
+width: 60%
 align: center
 name: conjunto convexo y no convexo
 ---
