@@ -227,7 +227,10 @@ Se espera que si $\textbf{x}^*$ es un mínimo local sin restricciones, la variac
 
 $$\nabla f(\textbf{x}^*)^T \cdot \Delta \textbf{x} = \sum_{i=1}^{n} \frac{\partial f(\textbf{x}^*)}{\partial x_i}\cdot x_i \geq 0$$
 
-En particular, si usamos $\Delta \textbf{x}$ con los valores positivos y negativos del vector unitario, obtenemos las condiciones $\frac{\partial f (\textbf{x}^*)}{\partial x_i} \geq 0$ y $\frac{\partial f(\textbf{x}^*)}{\partial x_i} \leq 0$ entonces la condición necesaria es
+En particular, si usamos $\Delta \textbf{x}$ con los valores positivos y negativos del vector unitario, obtenemos las condiciones $\frac{\partial f (\textbf{x}^*)}{\partial x_i} \geq 0$ y $\frac{\partial f(\textbf{x}^*)}{\partial x_i} \leq 0$ entonces denominamos la **condición necesaria de primer orden**, como
+```{margin}
+Todo *punto crítico* cumple la condición necesaria de primer orden. Un *punto de silla* es critico pero no es un mínimo. Por eso, la condición de primer orden es necesaria pero no suficiente.
+```
 
 ```{math}
 :label: fonc
@@ -242,7 +245,7 @@ ya que $\nabla f(\textbf{x}^*)^T \cdot \Delta \textbf{x} = 0$, obtenemos
 
 $$\Delta \textbf{x}^T \cdot \nabla^2f(\textbf{x}^*) \cdot \Delta \textbf{x} \geq 0,$$
 
-implica que
+implica la **condición necesaria de segundo orden**,
 
 ```{math}
 :label: sonc
