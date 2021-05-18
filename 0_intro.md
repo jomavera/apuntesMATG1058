@@ -29,7 +29,7 @@ Es una asignatura de formación profesional dirigida a los estudiantes de Logís
 
 | | Examen | Lecciones | Tareas | Reporte Investigativo |
 | --- | --- | --- | --- | --- | 
-|$1^{er}$ parcial| - | 50 | 10 | 40 |
+|$1^{er}$ parcial| 30 | 20 | 10 | 40 |
 |$2^{do}$ parcial| 30 | 20 | 10 | 40 |
 |$3^{er}$ parcial | 100 | - | - | - |
 
@@ -43,19 +43,19 @@ Es una asignatura de formación profesional dirigida a los estudiantes de Logís
 
 - Clases
 
-    - Se realizarán por **Microsoft Teams**.
+    - Se realizarán por **Zoom**.
     - Cada clase/reunión tendra un *canal* donde se agendará la clase/reunión según horario especificado del curso.
-    - Las consultas al profesor se realizarán a traves del canal “General” usando @ para mencionar al profesor.
+    - Las clases se agendarán, según horario de clases, en **Aula Virtual** donde se podrá visualizar el calendario.
 
 - Laboratorios
     - Se recomienda en **Google Colaboratory**.
     - Los laboratorios se deben entregar el archivo en formato IPython notebook (.ipynb).
 
 - Tareas, Lecciones, Entregas Trabajos
-    - Toda entrega por **SidWeb**.
+    - Toda entrega por **Aula Virtual**.
     - Las tareas se deben realizar a mano y entregar escaneadas. Cada hora o fracción tarde son **dos puntos menos**.
-    - Las lecciones se realizarán en SidWeb en horario indicado con anterioridad. Tambien es necesario estar conectado mediante Zoom.
-    - El archivo del laboratorio tambien debe ser entregado via SidWeb (Paralelo 101).
+    - Las lecciones se realizarán en **Aula Virtual** en horario indicado con anterioridad. Tambien es necesario estar conectado mediante **Zoom**.
+    - El archivo del laboratorio tambien debe ser entregado via **Aula Virtual** (Paralelo 101).
 
 ## Ética del estudiante
 
