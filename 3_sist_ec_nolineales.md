@@ -81,7 +81,7 @@ Las siguientes declaraciones son equivalentes:
 - Todos los valores propios de $A$ son positivos
 - Todos los elementos diagonales en una factorización de Cholesky son positivos
 - Cada una de sus submatrices principales tine su determinante (menor principal) positivo
-- Exista una matriz no singular $L$ tal que $A=L^T\cdot L$
+- Exista una matriz no singular $L$ tal que $A=L \cdot L^T$
 
 ```
 El anterior lema indica que podemos verificar los principales menores superiores (criterio de Sylvester) para determinar si la matriz es definida positiva
