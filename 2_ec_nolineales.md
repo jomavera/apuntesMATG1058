@@ -177,7 +177,7 @@ $$x^{(n+1)}=p+\frac{g''(\varepsilon_n)}{2}(x^{(n)}-p)^2,$$
 
 $$\frac{|x^{(n+1)}-p|}{|x^{(n)}-p|^2}=\frac{|g''(\varepsilon_n)|}{2}.$$
 
-Como $|g'(x)|\leq k < 1$, entonces $\{x^{(n)}\}_{n=0}^{\infty}$ converge a $p$ y $\{\varepsilon_n\}_{n=0}^{\infty}$ también converge a $p$ y $\{\varepsilon_n\}_{n=0}^{\infty}$ entonces
+Como $|g'(x)|\leq k < 1$, entonces $\{x^{(n)}\}_{n=0}^{\infty}$ converge a $p$ y $\{\varepsilon_n\}_{n=0}^{\infty}$ también converge a $p$ entonces
 
 
 ```{math}
