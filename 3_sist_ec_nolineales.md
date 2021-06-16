@@ -62,7 +62,20 @@ $$\begin{cases}L\textbf{y}=P\cdot \textbf{b}\\U\textbf{x}=\textbf{y}\end{cases}$
 
 ### Factorización de Cholesky
 
-Existen unas clases de matrices donde se puede aplicar la eliminación gaussiana efectivamente sin intercambio de las filas. La factorización Cholesky permite la resolución de una sistema lineal $A\textbf{x}=\textbf{b}$ que se puede aplicar cuando la matriz $A$ es *definida positiva*. En las siguientes unidades vamos a ver que el problema de optimizar una función de varias varibles esta relacionado a la resolución de sistemas de ecuaciones y que en el caso de funciones estrictamente convexas su hessiana es definida positiva. En estos casos se puede utilizar la factorización Cholesky. Cuando es aplicable esta factorización es mas rápida que la factorización LU.
+Existen unas clases de matrices donde se puede aplicar la eliminación gaussiana efectivamente sin intercambio de las filas. Para matrices definida positivas podemos realizar la factorización de Cholesky
+
+```{div} definicion
+**Factorización de Cholesky**
+
+Cierta matriz simétrica definida positiva $A$ puede ser decompuesta de la siguiente manera:
+
+$$A = L \cdot L^T$$
+
+donde $L$ es una matriz triangular inferior con elementos diagonales reales y positivos.
+```
+
+
+Esta factorización permite la resolución de una sistema lineal $A\textbf{x}=\textbf{b}$ que se puede aplicar cuando la matriz $A$ es *definida positiva*. En las siguientes unidades vamos a ver que el problema de optimizar una función de varias varibles esta relacionado a la resolución de sistemas de ecuaciones y que en el caso de funciones estrictamente convexas su hessiana es definida positiva. En estos casos se puede utilizar la factorización Cholesky. Cuando es aplicable esta factorización es mas rápida que la factorización LU.
 
 ```{div} definicion
 **Matriz definida positiva**
