@@ -51,7 +51,7 @@ Si $f$ no esta acotada inferiormente o superiormente, entonces $\inf_{x \in X} f
 Verificar si una función tiene una solución óptima global es difícil en general. Existen ciertos tipos de funciones donde se pueden garantizar la existencia de una solución óptima global.
 
 ```{margin}
-Este teorema nos indica que siempre y cuando una función sea continua en un conjunto **cerrado** y **acotado**, esta función tendra un mínimo global en dicho espacio.
+Este teorema nos indica que siempre y cuando una función sea continua en un conjunto **cerrado** y **acotado**, esta función tendrá un mínimo global en dicho espacio.
 ```
 
 ```{div} definicion
@@ -101,7 +101,7 @@ Conjuntos convexo y no convexo
 Un conjunto $C \subseteq \mathbb{R}^n$ es afín si la línea que atraviesa cualquier dos puntos en $C$ se encuentra en $C$, esto es, para cualquier $\textbf{x}_1, \textbf{x}_2 \in C$ y $\theta \in \mathbb{R}$ se cumple $\theta \textbf{x}_1 + (1-\theta)\textbf{x}_2 \in C$.
 ```
 
-- Los **hiplerplanos** $\{\textbf{x}| \textbf{a}^T\textbf{x} = b\}$ son conjutnos convexos.
+- Los **hiperplanos** $\{\textbf{x}| \textbf{a}^T\textbf{x} = b\}$ son conjuntos convexos.
 
 - Los **semiespacios** $\{\textbf{x} | \textbf{a}^T\textbf{x} \leq b \}$, $\{\textbf{x} | \textbf{a}^T\textbf{x} \geq b \}$ son convexos.
 
