@@ -249,7 +249,7 @@ implica la **condición necesaria de segundo orden**,
 
 ```{math}
 :label: sonc
-\nabla^2 f(\textbf{x}^*): \text{es definida semipositiva}
+\nabla^2 f(\textbf{x}^*): \text{es semidefinida positiva}
 ```
 
 ## Condiciones suficientes de optimalidad
