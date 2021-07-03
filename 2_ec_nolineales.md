@@ -124,15 +124,25 @@ $$|g'(x)|\leq \alpha < 1 \text{ para todo } x\in[a,b]$$
 entonces $g$ tiene únicamente un solo punto fijo $p$ en $[a,b]$
 ```
 
-### Orden de Convergencia
+### Acotas de Error
 
-Asumiendo que $|g'(x)|\geq k < 1$ y si la función $g$ cumple con el teorema de punto fijo entonces las acotas del error para ciertas interacion $n$ es 
+Asumiendo que $|g'(x)|\geq k < 1$ y si la función $g$ cumple con el teorema de punto fijo entonces las acotas del error para cierta interacion $n$ es 
 
 $$|x^{(n)}-p| \leq k^n \cdot \max\{x^{(0)}-a, b-x^{(0)}\}$$
 
 y
 
 $$|x^{(n)}-p| \leq \frac{k^n}{1-k} |x^{(1)}-x^{(0)}|$$
+
+### Convergencia
+
+Según el método de punto fijo $x^{(n+1)} = g(x^{(n)})$, entonces para un valor $z \in (x^{(n+1)}, x^{(n)})$ entonces 
+
+$$g'(z)=\frac{|x^{(n+1)}-g(x^{(n+1)})|}{x^{(n)} - g(x^{(n)})}$$
+
+Para un punto fijo $p$ y asumiendo $|g'(x)| \leq k < 1$ tenemos,
+
+$$|x^{(n+1)} - p| \leq k \cdot |x^{(n)}-p| \leq k^2 \cdot |x^{(n-1)}-p| \leq \cdots \leq k^n \cdot| x^{(0)} -p |$$
 
 ## Método de Newton para la resolución de ecuaciones de una variable
 
