@@ -42,6 +42,7 @@ Para ver que significa {eq}`igualdad 3` partamos de la definicion del número á
 > La suma de los dos segmentos $a$ y $b$ es al segmento mayor $a$, lo que este segmento mayor $a$ es al segmento menor $b$
 
 La ecuación que describe esto es
+
 ```{math}
 :label: numero aureo
 \frac{a+b}{a}=\frac{a}{b}
@@ -50,9 +51,10 @@ y esta proporción es el número áureo
 
 $$\frac{a}{b} = \varphi$$
 
-Suponiendo que $\rho < 1/2$ entonces podemos considerar que $a=1-\rho$ y $b=\rho$. Entonces {eq}`numero aureo` quedaria de esta manera:
+Suponiendo que $\rho < 1/2$ entonces podemos considerar que $a=1-\rho$ y $b=\rho$. Entonces {eq}`numero aureo` queda expresado en esta manera,
+
 ```{math}
 :label: numero aureo 2
 \frac{1}{1-\rho}=\frac{1-\rho}{\rho}
 ```
-{eq}`numero aureo 2` nos indica que $1-\rho = \frac{1}{\varphi}$. Por esto el nombre del método, así el intervalo se reduce en un factor de $1 - \rho \approx 0.618$ en cada interación.
+{eq}`numero aureo 2` nos indica que $1-\rho = \frac{1}{\varphi}$, y esta es la razón del nombre del método. De esta menra, reducimos el intervalo de búsqueda en un factor de $1 - \rho \approx 0.618$ en cada interación.
