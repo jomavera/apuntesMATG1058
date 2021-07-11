@@ -64,3 +64,14 @@ Suponiendo que $\rho < 1/2$ entonces podemos considerar que $a=1-\rho$ y $b=\rho
 \frac{1}{1-\rho}=\frac{1-\rho}{\rho}
 ```
 {eq}`numero aureo 2` nos indica que $1-\rho = \frac{1}{\varphi}$, y esta es la razón del nombre del método. De esta manera, reducimos el intervalo de búsqueda en un factor de $1 - \rho \approx 0.618$ en cada interación.
+
+#### Pseudocódigo
+
+```{figure} images/unidad_5_golden_search.PNG
+---
+width: 80%
+align: center
+name: pseudocogio golden search
+---
+Pseudocódigo búsqueda de la sección dorada
+```
