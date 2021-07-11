@@ -11,8 +11,14 @@ Se busca reducir el espacio de búsqueda al localizar un intervalo mas pequeño 
 
 Consideremos el siguiente ejemplo con intervalo inicial $l=[a_0, b_0]$:
 
-
-
+```{figure} images/golden_search_example-removebg.png
+---
+width: 50%
+align: center
+name: ej golden search
+---
+Ejemplo
+```
 
 donde los puntos interiores del intervalos son $a_1, b_1$  se determinan de la siguiente manera $a_1 - a_0 = b_0 - b_1 =\rho \cdot (b_0 - a_0)$. En este ejemplo, $f(a_1) < f(b_1)$ entonces es apropiado reducir la siguiente búsqueda en el intervalo $d=[a_0, b_1]$. El intervalo original se reduce en $(1-\rho)$,
 
@@ -57,4 +63,4 @@ Suponiendo que $\rho < 1/2$ entonces podemos considerar que $a=1-\rho$ y $b=\rho
 :label: numero aureo 2
 \frac{1}{1-\rho}=\frac{1-\rho}{\rho}
 ```
-{eq}`numero aureo 2` nos indica que $1-\rho = \frac{1}{\varphi}$, y esta es la razón del nombre del método. De esta menra, reducimos el intervalo de búsqueda en un factor de $1 - \rho \approx 0.618$ en cada interación.
+{eq}`numero aureo 2` nos indica que $1-\rho = \frac{1}{\varphi}$, y esta es la razón del nombre del método. De esta manera, reducimos el intervalo de búsqueda en un factor de $1 - \rho \approx 0.618$ en cada interación.
