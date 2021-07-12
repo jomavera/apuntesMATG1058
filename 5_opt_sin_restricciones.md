@@ -33,7 +33,7 @@ Si queremos que uno de los nuevos puntos interiores sea el ya evaluado $a_1$ par
 
 ```{math}
 :label: igualdad 2
-\rho \cdot l = (1-\rho)
+\rho \cdot l = (1-\rho) \cdot d
 ```
 
 Si reemplazamos {eq}`igualdad 1` en {eq}`igualdad 2` entonces nos queda la siguiente expresion
@@ -55,7 +55,7 @@ La ecuación que describe esto es
 ```
 y esta proporción es el número áureo
 
-$$\frac{a}{b} = \varphi$$
+$$\frac{a}{b} = \varphi \approx 1.61803$$
 
 Suponiendo que $\rho < 1/2$ entonces podemos considerar que $a=1-\rho$ y $b=\rho$. Entonces {eq}`numero aureo` queda expresado en esta manera,
 
@@ -75,3 +75,35 @@ name: pseudocogio golden search
 ---
 Pseudocódigo búsqueda de la sección dorada
 ```
+
+### Búsqueda de Fibonacci
+
+Consideremos el factor $\rho_t$ cambia en cada iteración $t$. Al igual en la búsqueda de la sección dorada solo queremos que en cada iteración solo se requiera una nueva evaluación de la función. Entonces según {eq}`igualdad 3`
+
+```{math}
+:label: restriccion fibonacci
+\rho_t = 1 - \frac{\rho_t}{1-\rho_t}, \hspace{.4cm} t=1,...,n-1
+```
+
+Para minimizar el intervalo de incertidumbre en $n$ pasos se plantea el siguiente problema de minimización.
+
+```{math}
+:label: problema min fibonacci
+\begin{aligned}
+\min \hspace{.2cm} (1-\rho_1)\cdot (1-\rho_2) \cdots (1-\rho_n)\\
+\text{s.a.}\quad \rho_t = 1 - \frac{\rho_t}{1-\rho_t}, & \hspace{.4cm}  t=1,...,n-1\\
+0 \leq \rho_1 \leq \frac{1}{2}, & \hspace{.4cm} t=1,...,n
+\end{aligned}
+```
+
+```{div} definicion
+**Teorema**
+
+La solución óptima del problema {eq}`problema min fibonacci` esta dada por
+
+$$\rho_t = 1 - \frac{F_{n-t+1}}{F_{n-t+2}}, \hspace{.4cm} t=1,...,n$$
+
+donde $F_n$ es el $n^{avo}$ elemento de la secuencia de Fibonacci.
+```
+
+Esta ecuación indica que en cada iteración $t$ el intervalo se reduce en $\frac{F_{n-t+1}}{F_{n-t+2}}$. Si realizamos $n$ iteraciones de la búsqueda de Fibonacci reducimos el intervalo inicial en un factor de $F_{n+1}$.
