@@ -107,3 +107,14 @@ donde $F_n$ es el $n^{avo}$ elemento de la secuencia de Fibonacci.
 ```
 
 Esta ecuación indica que en cada iteración $t$ el intervalo se reduce en $\frac{F_{n-t+1}}{F_{n-t+2}}$. Si realizamos $n$ iteraciones de la búsqueda de Fibonacci reducimos el intervalo inicial en un factor de $F_{n+1}$.
+
+#### Pseudocódigo
+
+```{figure} images/unidad_5_fibonacci_search.PNG
+---
+width: 80%
+align: center
+name: pseudocogio fibonacci search
+---
+Pseudocódigo búsqueda de Fibonacci
+```
