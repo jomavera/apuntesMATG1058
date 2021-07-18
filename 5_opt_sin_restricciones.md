@@ -118,3 +118,15 @@ name: pseudocogio fibonacci search
 ---
 Pseudocódigo búsqueda de Fibonacci
 ```
+
+## Problemas de optimización multivariante
+
+Dado el problema 
+
+$$\min f(\textbf{x})$$
+
+Los algoritmos clásicos para problemas de optimización sin restricciones usualmente construyen una secuencia de puntos $\{\textbf{x}^{(k)}: k \geq 0 \}$, tal que $\textbf{x}^{(k)} \to \textbf{x}^{*}$, $k \to \infty$, donde $\nabla f(\textbf{x}^{*})=\textbf{0}$.
+
+Cada punto de la secuencia es obtenida del punto anterior moviéndose una distancia a lo largo de la dirección $\textbf{p}^{(k)}$:
+
+$$\textbf{x}^{(k+1)} = \textbf{x}^{(k)} + \alpha^{(k)} \cdot \textbf{p}^{(k)}$$
