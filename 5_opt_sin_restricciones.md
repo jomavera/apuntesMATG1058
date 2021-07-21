@@ -130,3 +130,29 @@ Los algoritmos clásicos para problemas de optimización sin restricciones usual
 Cada punto de la secuencia es obtenida del punto anterior moviéndose una distancia a lo largo de la dirección $\textbf{p}^{(k)}$:
 
 $$\textbf{x}^{(k+1)} = \textbf{x}^{(k)} + \alpha^{(k)} \cdot \textbf{p}^{(k)}$$
+
+
+### Algoritmos de Busqueda Lineal
+
+En cada iteración $k$, dado el punto $\textbf{x}^{(k)}$ se escoge una dirección $\textbf{p}^{(k)}$. La dirección $\textbf{p}^{(k)}$ es seleccionada basado en:
+- Métodos de primer orden: gradient $\nabla f(\textbf{x}^{(k)})$
+- Métodos de primer orden: hessiana $\nabla^2 f(\textbf{x}^{(k)})$
+
+A lo largo de esta dirección se busca una nueva solución con un mejor valor de la función. La longitud de paso se puede determinar resolviendo de manera aproximada (o exacta) el problema unidimensional:
+
+$$\min_{\alpha \geq 0} f(\textbf{x}^{(k)} + \alpha \cdot \textbf{p}^{(k)} )$$
+
+#### Método de Descenso de Gradiente
+
+Es un método de búsqueda lineal que mueve a lo largo de la dirección $\textbf{p}^{(k)} = - \nabla f(\textbf{x}^{(k)})$ en cada paso. Esta dirección es donde la función decrece mas rápidamente.
+
+##### Pseudocódigo
+
+```{figure} images/unidad_5_gradient_descent.PNG
+---
+width: 80%
+align: center
+name: pseudocogio gradient descent
+---
+Método de Descenso de Gradiente
+```
