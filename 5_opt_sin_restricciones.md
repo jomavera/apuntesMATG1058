@@ -156,3 +156,29 @@ name: pseudocogio gradient descent
 ---
 Método de Descenso de Gradiente
 ```
+
+#### Método de Gradiente Conjugado
+
+Si partimos de la idea de optimizar una función cuadrática de la siguiente forma
+
+$$\min_{\textbf{x}} f(\textbf{x}) = \frac{1}{2} \textbf{x}^T A \textbf{x} + \textbf{b}^T\textbf{x} + c$$
+
+entonces $A$ es simétrica y positiva definida por ende la función tiene un único mínimo local. El método de Gradiente Conjugado utiliza direcciones mutuamente conjugados con respecto a $A$:
+
+$$\textbf{p}_{(i)}^T \cdot A \cdot \textbf{p}_{(j)} = 0 \text{ para todo } i \neq j$$
+
+El algoritmo empieza con la dirección de descenso de gradiente:
+
+$$\textbf{x}^{(0)} = - \nabla f(\textbf{x}^{(0)})$$
+
+En los pasos sucesivos se escoge la dirección basados en el gradiente evaluado en el siguiente punto y en la dirección pasada:
+
+$$\textbf{p}^{(k+1)} = - \nabla f(\textbf{x}^{(k+1)}) + \beta^{(k)}\cdot \textbf{p}^{(k)}$$
+
+Se puede determinar $\beta$ para un $A$ conocido, y partiendo del hecho que $\textbf{p}^{(k+1)}$ es conjugado de $\textbf{(k)}$:
+
+$$\textbf{p}^{(k+1)T} \cdot A \cdot \textbf{p}^{(k)} = 0$$
+
+$$\big( - \nabla f(\textbf{x}^{(k+1)}) + \beta^{(k)}\cdot \textbf{p}^{(k)} \big)^T \cdot A \cdot \textbf{p}^{(k)} = 0$$
+
+$$ \beta^{(k)} = \frac{\nabla f(\textbf{x}^{(k+1)})^T\cdot A \cdot \textbf{p}^{(k)}}{\textbf{p}^{(k)T} \cdot A \cdot \textbf{p}^{(k)} }$$
