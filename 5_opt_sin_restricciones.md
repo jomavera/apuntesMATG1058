@@ -144,7 +144,7 @@ $$\min_{\alpha \geq 0} f(\textbf{x}^{(k)} + \alpha \cdot \textbf{p}^{(k)} )$$
 
 #### Método de Descenso de Gradiente
 
-Es un método de búsqueda lineal que mueve a lo largo de la dirección $\textbf{p}^{(k)} = - \nabla f(\textbf{x}^{(k)})$ en cada paso. Esta dirección es donde la función decrece mas rápidamente.
+Es un método de búsqueda lineal que se mueve a lo largo de la dirección $\textbf{p}^{(k)} = - \nabla f(\textbf{x}^{(k)})$ en cada paso. Esta dirección es donde la función decrece mas rápidamente.
 
 ##### Pseudocódigo
 
@@ -182,3 +182,26 @@ $$\textbf{p}^{(k+1)T} \cdot A \cdot \textbf{p}^{(k)} = 0$$
 $$\big( - \nabla f(\textbf{x}^{(k+1)}) + \beta^{(k)}\cdot \textbf{p}^{(k)} \big)^T \cdot A \cdot \textbf{p}^{(k)} = 0$$
 
 $$ \beta^{(k)} = \frac{\nabla f(\textbf{x}^{(k+1)})^T\cdot A \cdot \textbf{p}^{(k)}}{\textbf{p}^{(k)T} \cdot A \cdot \textbf{p}^{(k)} }$$
+
+Este método tambien puede ser aplicado a funciones no cuadráticas. Funciones suaves continuas se comportan como funciones cuadráticas en áreas cercanas al mínimo local. En estos casos el método converge muy rápido. En general, en estos casos no sabemos que matriz $A$ me permite aproximar a una función cuadrática. Existen varias opciones que tienden a funcionar bien para aproximar $\beta^{(k)}$:
+
+- Fletcher-Reeves:
+
+
+$$\beta^{(k)} = \frac{\nabla f(\textbf{x}^{(k)})^T \cdot \nabla f(\textbf{x}^{(k)})  }{ \nabla f(\textbf{x}^{(k-1)})^T \cdot \nabla f(\textbf{x}^{(k-1)}) }$$
+
+- Polak-Ribiere:
+
+
+$$\beta^{(k)} = \frac{\nabla f(\textbf{x}^{(k)})^T \cdot (\nabla f(\textbf{x}^{(k)}) - \nabla f(\textbf{x}^{(k-1)}) ) }{ \nabla f(\textbf{x}^{(k-1)})^T \cdot \nabla f(\textbf{x}^{(k-1)}) }$$
+
+##### Pseudocódigo
+
+```{figure} images/unidad_5_conjugate_gradient.PNG
+---
+width: 80%
+align: center
+name: pseudocogio conjugate gradient
+---
+Método de Gradiente Conjugado
+```
