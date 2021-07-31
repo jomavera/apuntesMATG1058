@@ -205,3 +205,24 @@ name: pseudocogio conjugate gradient
 ---
 Método de Gradiente Conjugado
 ```
+
+#### Calculo de longitud de paso
+
+Para métodos de busqueda lineal es necesario determinar la longitud de paso $\alpha$. Esto es difícil para funciones no lineales. Además, nos enfrentamos a un trade-off. Queremos que el paso haga una reducción considerable al valor de la función $f$ pero al mismo tiempo que no tome demasiado tiempo en determinarlo. Los algoritmos para determinar la longitud de paso prueban una secuencia de candidatos de $\alpha$. Se escoge el $\alpha$ que cumple cierta condición. Las **condiciones de Wolfe** son las mas utilizadas y son las condiciones que se explican a continuación:
+
+##### Condicion de Armijo
+
+Esta condición estipula que $\alpha^{(k)}$ debe dar un disminución suficiente en la función objetivo
+
+$$f(\textbf{x}^{(k)} + \alpha \textbf{p}^{(k)}) \leq f(\textbf{x}^{(k)}) + c_1 \alpha \nabla f(\textbf{x}^{(k)})^T \cdot \textbf{p}^{(k)}$$
+
+para una constante $c_1 \in (0,1)$. Si denotamos $l(\alpha) = c_1  \alpha \nabla f(\textbf{x}^{(k)})^T \cdot \textbf{p}^{(k)}$, esta función es un recta con pendiente negativa.
+
+##### Condicion de Curvatura
+
+La condición de Armijo no es suficiente ya que se cumple para cualquier $\alpha$ pequeño. Para descartar pasos pequeños usamos la condición de curvatura
+
+
+$$\nabla f(\textbf{x}^{(k)} + \alpha \textbf{p}^{(k)}) \geq c_2 \nabla f(\textbf{x}^{(k)})^T \cdot \textbf{p}^{(k)}$$
+
+para alguna constante $c_2 \in (c_1, 1)$
