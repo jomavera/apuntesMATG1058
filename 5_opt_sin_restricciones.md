@@ -119,7 +119,7 @@ name: pseudocogio fibonacci search
 Pseudocódigo búsqueda de Fibonacci
 ```
 
-## Problemas de optimización multivariante
+## Algoritmos de Busqueda Lineal
 
 Dado el problema 
 
@@ -131,9 +131,6 @@ Cada punto de la secuencia es obtenida del punto anterior moviéndose una distan
 
 $$\textbf{x}^{(k+1)} = \textbf{x}^{(k)} + \alpha^{(k)} \cdot \textbf{p}^{(k)}$$
 
-
-### Algoritmos de Busqueda Lineal
-
 En cada iteración $k$, dado el punto $\textbf{x}^{(k)}$ se escoge una dirección $\textbf{p}^{(k)}$. La dirección $\textbf{p}^{(k)}$ es seleccionada basado en:
 - Métodos de primer orden: gradient $\nabla f(\textbf{x}^{(k)})$
 - Métodos de primer orden: hessiana $\nabla^2 f(\textbf{x}^{(k)})$
@@ -142,11 +139,11 @@ A lo largo de esta dirección se busca una nueva solución con un mejor valor de
 
 $$\min_{\alpha \geq 0} f(\textbf{x}^{(k)} + \alpha \cdot \textbf{p}^{(k)} )$$
 
-#### Método de Descenso de Gradiente
+### Método de Descenso de Gradiente
 
 Es un método de búsqueda lineal que se mueve a lo largo de la dirección $\textbf{p}^{(k)} = - \nabla f(\textbf{x}^{(k)})$ en cada paso. Esta dirección es donde la función decrece mas rápidamente.
 
-##### Pseudocódigo
+#### Pseudocódigo
 
 ```{figure} images/unidad_5_gradient_descent.PNG
 ---
@@ -157,7 +154,7 @@ name: pseudocogio gradient descent
 Método de Descenso de Gradiente
 ```
 
-#### Método de Gradiente Conjugado
+### Método de Gradiente Conjugado
 
 Si partimos de la idea de optimizar una función cuadrática de la siguiente forma
 
@@ -195,7 +192,7 @@ $$\beta^{(k)} = \frac{\nabla f(\textbf{x}^{(k)})^T \cdot \nabla f(\textbf{x}^{(k
 
 $$\beta^{(k)} = \frac{\nabla f(\textbf{x}^{(k)})^T \cdot (\nabla f(\textbf{x}^{(k)}) - \nabla f(\textbf{x}^{(k-1)}) ) }{ \nabla f(\textbf{x}^{(k-1)})^T \cdot \nabla f(\textbf{x}^{(k-1)}) }$$
 
-##### Pseudocódigo
+#### Pseudocódigo
 
 ```{figure} images/unidad_5_conjugate_gradient.PNG
 ---
@@ -206,11 +203,28 @@ name: pseudocogio conjugate gradient
 Método de Gradiente Conjugado
 ```
 
-#### Calculo de longitud de paso
+### Calculo de longitud de paso
 
-Para métodos de busqueda lineal es necesario determinar la longitud de paso $\alpha$. Esto es difícil para funciones no lineales. Además, nos enfrentamos a un trade-off. Queremos que el paso haga una reducción considerable al valor de la función $f$ pero al mismo tiempo que no tome demasiado tiempo en determinarlo. Los algoritmos para determinar la longitud de paso prueban una secuencia de candidatos de $\alpha$. Se escoge el $\alpha$ que cumple cierta condición. Las **condiciones de Wolfe** son las mas utilizadas y son las condiciones que se explican a continuación:
+Para métodos de busqueda lineal es necesario determinar la longitud de paso $\alpha$. Esto es difícil para funciones no lineales. Además, nos enfrentamos a un trade-off. Queremos que el paso haga una reducción considerable al valor de la función $f$ pero al mismo tiempo que no tome demasiado tiempo en determinarlo. Los algoritmos para determinar la longitud de paso prueban una secuencia de candidatos de $\alpha$. Se escoge el $\alpha$ que cumple cierta condición. 
 
-##### Condicion de Armijo
+#### Backtracking
+
+Una estrategia para determinar la longitud de paso es usar retroceso. Partimos con un $\alpha_0$ y lo disminuimos por un factor $\tau$ hasta encontrar un mejor valor de $f$.
+
+```{figure} images/unidad_5_retroceso.PNG
+---
+width: 80%
+align: center
+name: retroceso
+---
+Backtracking para cálculo de longitud de paso
+```
+
+
+#### Condiciones de Wolfe
+Las condiciones de Wolfe son las mas utilizadas y son las condiciones que se explican a continuación:
+
+- **Condicion de Armijo**
 
 Esta condición estipula que $\alpha^{(k)}$ debe dar un disminución suficiente en la función objetivo
 
@@ -218,7 +232,7 @@ $$f(\textbf{x}^{(k)} + \alpha \textbf{p}^{(k)}) \leq f(\textbf{x}^{(k)}) + c_1 \
 
 para una constante $c_1 \in (0,1)$. Si denotamos $l(\alpha) = c_1  \alpha \nabla f(\textbf{x}^{(k)})^T \cdot \textbf{p}^{(k)}$, esta función es un recta con pendiente negativa.
 
-##### Condicion de Curvatura
+- **Condicion de Curvatura**
 
 La condición de Armijo no es suficiente ya que se cumple para cualquier $\alpha$ pequeño. Para descartar pasos pequeños usamos la condición de curvatura
 
@@ -226,3 +240,15 @@ La condición de Armijo no es suficiente ya que se cumple para cualquier $\alpha
 $$\nabla f(\textbf{x}^{(k)} + \alpha \textbf{p}^{(k)}) \geq c_2 \nabla f(\textbf{x}^{(k)})^T \cdot \textbf{p}^{(k)}$$
 
 para alguna constante $c_2 \in (c_1, 1)$
+
+Si combinamos la condición de Armijo con el procedimiento de retroceso podemos dispensar de la condición de curvatura y solo usar la condición suficiente de disminución para terminar el procedimiento de búsqueda lineal. Este procedimiento se muestra en el pseudocódigo a continuación:
+
+
+```{figure} images/unidad_5_retroceso_armijo.PNG
+---
+width: 80%
+align: center
+name: armijo retroceso
+---
+Condicion de Armijo con backtracking para cálculo de longitud de paso
+```
