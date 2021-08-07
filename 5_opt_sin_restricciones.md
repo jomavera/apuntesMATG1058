@@ -252,3 +252,25 @@ name: armijo retroceso
 ---
 Condicion de Armijo con backtracking para cálculo de longitud de paso
 ```
+
+### Método de Newton
+
+ Partiendo de las condiciones de optimalidad, un punto $\textbf{x}^* \in \mathbb{R^n$ es mínimo local si $\nabla f (\textbf{x}^*) = 0$. Entonces, dado un punto $\textbf{x} \in \mathbb{R}^n$ para el cual $\nabla^2 f (\textbf{x})$ es no singular, la siguiente solución es
+
+ $$\textbf{x}^{(k+1)} = \textbf{x}^{(k)} - \big[\nabla^2 f (\textbf{x}^{(k)}) \big]^{-1} \nabla f (\textbf{x}^{(k)})$$
+
+
+Este método puede ser visto como el método de descenso de gradiente pero usando la inversa de la hessiana para escalar el paso. La hessiana es definida positiva para todo $k$ entonces tenemos una dirección de descenso. Para determinar la inversa de la hessiana se puede resolver el siguiente sistema de ecuaciones:
+
+$$\nabla^2 f (\textbf{x}^{(k)}) \cdot \textbf{p}^{(k)} = - \nabla f (\textbf{x}^{(k)})$$
+
+#### Pseudocódigo
+
+```{figure} images/unidad_5_newton.PNG
+---
+width: 80%
+align: center
+name: newton
+---
+Método de Newton
+```
