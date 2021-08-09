@@ -264,6 +264,16 @@ Este método puede ser visto como el método de descenso de gradiente pero usand
 
 $$\nabla^2 f (\textbf{x}^{(k)}) \cdot \textbf{p}^{(k)} = - \nabla f (\textbf{x}^{(k)})$$
 
+#### Convergencia
+
+Suponga que $f$ es doblemente diferenciable y la hessiana $\nabla^2 f(\textbf{x})$ es Lipschitz continua en un vecindario de $\textbf{x}^*$ en donde las condiciones suficientes de segundo orden son satisfechas. Considere que el paso $\textbf{x}^{(k+1)} = \textbf{x}^{(k)} + \textbf{p}^{(k)}$, donde $\textbf{p}^{(k)}$ es dado por el método de Newton. Entonces:
+
+1. Si el punto inicial $\textbf{x}^{(0)}$  es suficientemente cerca de $\textbf{x}^*$, la secuencia de pasos converge a$\textbf{x}^*$
+
+2. La tasa de convergencia de $\{\textbf{x}^{(k)} \}_{k=0}^{\infty} $ es cuadrática
+
+3. La secuencia de las normas del gradientes $\{\|\nabla f( \textbf{x}^{(k)} ) \| \}_{k=0}^{\infty} $ converge cuadráticamente a cero.
+
 #### Pseudocódigo
 
 ```{figure} images/unidad_5_newton.PNG
