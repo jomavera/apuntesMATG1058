@@ -284,3 +284,38 @@ name: newton
 ---
 Método de Newton
 ```
+
+### Método de Newton con Modificación de Hessiana
+
+Para puntos alejados de la solución puede ocurrir que la matriz Hessiana $\nabla^2 f(\textbf{x})$ puede no ser definida positiva, así que la dirección $\textbf{p}^{(k)}$ no necesarimente es una dirección de descenso. En ese caso, se modifica la hessiana con una aproximación que sea definida positiva. La hessiana modificada se obtiene añadiendo una matriz diagonal positiva o añadiendo una matriz de rango completo a la hessiana verdadera $\nabla^2 f(\textbf{x}^{(k)})$. De esta manera, se reemplaza la hessiana por $B^{(k)}$ tal que
+
+$$B^{(k)} = \nabla^2 f(\textbf{x}^{(k)}) + E^{(k)}$$
+
+Un enfoque para modificar la hessiana es mediante la factorización de Cholesky modificada. Se factoriza $\nabla^2 f(\textbf{x}^{(k)})$ pero se incrementa los elementos diagonales, encontrados durante la factorización, para asegurarse que son los suficientemente positivos. Este método garantiza que la factorización exista y que esta acotado relativamente a la norma de la hessiana.
+
+#### Factorización de Cholesky Modificada - $LDL^T$
+
+La factorización de Cholesky se puede expresar como 
+$A = LDL^T$
+donde $L$ es una matriz triangular inferior con elementos unitarios en su diagonal y $D$ es una matriz diagonal con elementos positivos. Si $A$ es indefinida, la factorización puede no existir. Una estrategia es computar $LDL^T$ y modificar los elementos de $D$ tal que sean los suficientemente positivos procurando que los elementos de $D$ y $L$ no sean muy grandes. Para controlar esto, se introduce dos parámetros $\delta$ y $\beta$.
+
+En este método se requiere que en cada iteración para calcular la $j^{va}$ columna de $L$ y $D$ se satisfaga las siguientes cotas:
+
+$$d_j \geq \delta, \hspace{2cm} |m_{i, j} | \leq \beta,\hspace{2cm} i=j+1, j+2, ... , n$$
+
+donde $m_{i, j} = l_{i, j} \sqrt(d_j)$. Entonces para calcular las diagonales de $D$ es
+
+$$d_j = \max \bigg( |c_{i, j} |, \bigg(\frac{\theta_j}{\beta}\bigg)^2, \delta \bigg) \hspace{0.5cm} \text{con } \theta_j= \max_{j < i \leq n} |c_{i, j} | $$
+
+donde $c_{i, j} = a_{i, j} - \sum_{s=1}^{j-1} d_s l_{i, s} l_{j, s}$
+
+##### Pseudocódigo
+
+```{figure} images/unidad_5_cholesly_LDL.PNG
+---
+width: 80%
+align: center
+name: cholesky ldl
+---
+Factorización Cholesky Modificada
+```
