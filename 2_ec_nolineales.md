@@ -124,7 +124,7 @@ $$|g'(x)|\leq \alpha < 1 \text{ para todo } x\in[a,b]$$
 entonces $g$ tiene únicamente un solo punto fijo $p$ en $[a,b]$
 ```
 
-### Acotas de Error
+### Cotas de Error
 
 Asumiendo que $|g'(x)|\geq k < 1$ y si la función $g$ cumple con el teorema de punto fijo entonces las acotas del error para cierta interacion $n$ es 
 
