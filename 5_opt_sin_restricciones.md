@@ -319,3 +319,44 @@ name: cholesky ldl
 ---
 Factorización Cholesky Modificada
 ```
+
+#### Factorización de Cholesky Modificada - $LL^T$
+
+Si planteamos la factorización como 
+
+$$A = L \cdot L^T$$
+
+en este caso $L$ no necesariamente tiene una diagonal con elementos iguales a uno. Si la matriz $A$ no es definida positiva se podría incrementar los elementos diagonales. Esto es aplicado secuencialmente en el proceso de factorización obteniendo 
+
+$$ L^{(k)}\cdot L^{(k)^T} = \nabla^2 f(\textbf{x}^{(k)}) + \Delta^{(k)} $$
+
+donde $\Delta^{(k)}$ es diagonal.
+
+El método consiste en introducir secuencialmente los elementos de $\Delta^{(k)}$ durante la factorización que se encuentra los valores de las diagonales, que pueden ser negativas o cercanas a cero indicando que $A$ no es definida positiva o casi singular.
+
+Se deben escoger los valores $\mu_1$ y $\mu_2$ tal que $\mu_1 < \mu_2$. El algoritmo consiste en lo siguiente:
+
+1. Determinar los elementos de la primera columna de $L$:
+
+$$l_{1,1} = \begin{cases} \sqrt{a_{1,1}}  \hspace{0.2cm} \text{si } \mu_1 < a_{1,1} \\ \sqrt{\mu_2} \hspace{0.2cm} \text{de otra manera}\end{cases}$$
+
+$$l_{i,1} = \frac{a_{i,1}}{l_{1,1}} \hspace{.2cm} \text{para } i=1, 2, ..., n$$
+
+2. Dado los elementos de la 1, 2, ..., $i-1^{va}$ columna se obtiene los elementos de la $i^{va}$ columna
+
+$$l_{j,j} = \begin{cases} \sqrt{a_{j,j}  - \sum_{k=1}^{j-1} l_{j, k}^2 }, \hspace{.2cm} \text{si } \mu_1 < a_{1,1} -  \sum_{k=1}^{j-1} l_{j, k}^2 \\ \sqrt{\mu_2}, \hspace{.2cm} \text{de otra manera} \end{cases}$$
+
+$$l_{i,j} = \frac{a_{i,j} - \sum_{m=1}^{j-1} l_{j, m} \cdot l_{i, m}}{l_{j,j}}, \hspace{.2cm} \text{para } i=j+1, ..., n$$
+
+El parámetro $\mu_1$ debe ser pequeño para evitar modificaciones grandes de la hessiana. Aquí probablemente hay prueba y error. Como regla practica es escoger $\mu_1 = 0$ e ir ncrementándolo si ocurren dificultades y normas grandes del vector dirección.
+
+El parámetro $\mu_2$ generalmente deber ser escogido que se mucho mas grande que $\mu_1$.  $mu_2$ puede provocar que la hessiana sea casi singular. Una regla practica es hacer $\mu_2$ pequeño e incrementarlo si la longitud de paso generado es considerablemente menor que 1. La idea es que valores pequeños de $\mu_2$ tienden a producir direcciones con normas grandes y por ende longitudes de paso pequeñas.
+
+```{figure} images/unidad_5_cholesly_LL.PNG
+---
+width: 80%
+align: center
+name: cholesky ll
+---
+Factorización Cholesky Modificada LL
+```
