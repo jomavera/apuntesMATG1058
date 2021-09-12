@@ -352,7 +352,7 @@ El parámetro $\mu_1$ debe ser pequeño para evitar modificaciones grandes de la
 
 El parámetro $\mu_2$ generalmente deber ser escogido que se mucho mas grande que $\mu_1$.  $mu_2$ puede provocar que la hessiana sea casi singular. Una regla practica es hacer $\mu_2$ pequeño e incrementarlo si la longitud de paso generado es considerablemente menor que 1. La idea es que valores pequeños de $\mu_2$ tienden a producir direcciones con normas grandes y por ende longitudes de paso pequeñas.
 
-```{figure} images/unidad_5_cholesly_LL.PNG
+```{figure} images/unidad_5_cholesly_LL.png
 ---
 width: 80%
 align: center
