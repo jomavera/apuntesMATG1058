@@ -174,7 +174,7 @@ entonces $\{x^{(n)}\}_{n=0}^{\infty}$ converge a $x^*$ en orden $\alpha$ con err
 - $\lambda$ afecta la velocidad de convergencia pero $\alpha$ predomina.
 
 - Métodos en este curso se caracterizan de la siguiente manera:
-    - Si $\alpha=1$, la secuencia es **linealmente convergente**
-        - Si $\lambda=0$ es **superlinealmente**.
-        - Si $\lambda=1$ es **sublinealmente**.
-    - Si $\alpha=2$, la secuencia es **cuadráticamente convergente**.
+    - Si $\alpha=1$ y $0< \lambda < 1$ la secuencia es **linealmente convergente**
+    - Si $\alpha=1$ y $\lambda=0$ es **superlinealmente convergente**
+    - Si $\alpha=1$ y $\lambda=1$ es **sublinealmente convergente**
+    - Si $\alpha=2$, la secuencia es **cuadráticamente convergente**
