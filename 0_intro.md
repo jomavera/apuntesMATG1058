@@ -29,7 +29,7 @@ Es una asignatura de formación profesional dirigida a los estudiantes de Logís
 
 | | Examen | Lecciones | Tareas | Reporte Investigativo |
 | --- | --- | --- | --- | --- | 
-|$1^{er}$ parcial| 30 | 20 | 10 | 40 |
+|$1^{er}$ parcial| 40 | 30 | 30 | - |
 |$2^{do}$ parcial| 30 | 20 | 10 | 40 |
 |$3^{er}$ parcial | 100 | - | - | - |
 
